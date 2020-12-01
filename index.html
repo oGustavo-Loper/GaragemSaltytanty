@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garagem Saltytanty</title>
+    <link rel="shortcut icon" href="img/logo-name.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="m-menu" id="home"></div>
+        <nav class="navbar navbar-expand-md fundo-gradiente navbar-dark">
+            <a href="index.html" class="navbar-brand titulo">
+                <h1>Garagem</h1>
+                <h1>Saltytanty</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Comprar Carros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="alugar_veiculo.html" class="nav-link">Alugar Carros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sobre Nos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tela_login&cadastro.html" class="nav-link">Cadastrar/Conectar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="principal">
+        <h1>Venda de Veiculos</h1>
+        <div class="container-fluid">
+            <div class="row text-primary m-4">
+                <div class="col-sm-8">
+                    <a name="resultado" id="resultado"></a>
+                    <h1 class="text-center">Lista de carros Disponiveis</h1>
+                    <table class="table table-dark table-hover" id="tbClientes">
+                        <tr>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Portas</th>
+                            <th>Valor</th>
+                            <th>Ano</th>
+                            <th>Placa</th>
+                            <th>Categoria</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-sm-4">
+                    <div class="box">
+                        <h1>Cadastro de Veiculo</h1>
+                        <ul class="list-group" id="outLista">
+                        </ul>
+                        <form id="frmAdicionar">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <select class="form-control form-control-lg" id="marca">
+                                        <option>Selecione a Marca</option>
+                                        <option>Volkswagen</option>
+                                        <option>Ford</option>
+                                        <option>Chevrolet</option>
+                                        <option>Fiat</option>
+                                        <option>Scania</option>
+                                        <option>Man</option>
+                                        <option>Volvo</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="Modelo" placeholder="Modelo"
+                                        class="form-control form-control-lg" id="modelo">
+                                    <!--<label>Modelo</label> -->
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select class="form-control form-control-lg" id="portas">
+                                        <option>Quantidade de Portas</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="form-goup col-md-6">
+                                    <input type="number" name="Valor" placeholder="Valor"
+                                        class="form-control form-control-lg" id="valor">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="number" name="Ano" placeholder="Ano"
+                                        class="form-control form-control-lg" id="ano">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="Place" placeholder="Placa"
+                                        class="form-control form-control-lg" id="placa">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select class="form-control form-control-lg" id="categoria">
+                                        <option>Categoria</option>
+                                        <option>A</option>
+                                        <option>B</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                        <option>E</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="btn btn-dark float-right mx-2 my-3 px-5" id="salvaform">Adicionar Carro</button>
+                        <br>
+                        <br>
+                        <form>
+                            <h1>Vender Veiculo</h1>
+                            <form>
+                                <h1>Importar o nome do veiculo a ser vendido aqui pra dentro</h1>
+                            </form>
+                            <button class="btn btn-dark float-right mx-2 my-3 px-5" id="btVender">Vender
+                                Veiculo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="rodape">
+        Colocar algum rodape
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
